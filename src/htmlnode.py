@@ -23,7 +23,7 @@ class LeafNode(HTMLNode):
         super().__init__(tag, value, None, props)
 
     def to_html(self):
-        if self.value is None or len(self.value) == 0:
+        if self.value is None:
             raise ValueError("Invalid html")
         if self.tag is None:
             return self.value
